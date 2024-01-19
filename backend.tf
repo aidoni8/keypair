@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "aidonitestmybucket"
+    bucket = "aidonimybucket"
     key    = "path/to/my/key"
     region = "us-east-2"
   }
