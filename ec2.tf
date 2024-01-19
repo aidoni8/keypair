@@ -9,7 +9,7 @@ terraform {
   required_version = ">= 1.2.0"
 }
 
-provider "ec2-instance" {
+provider "aws-ec2" {
   region  = "us-east-2"
 }
 
