@@ -36,8 +36,6 @@ jobs:
     - name: Terraform Plan
       run: terraform plan
 
-    - name: Terraform Graph
-      run: terraform graph
-
     - name: Terraform Apply
+      if: github.ref == 'refs/heads/main' && github.event_name == 'pull_request'
       run: terraform apply -auto-approve
