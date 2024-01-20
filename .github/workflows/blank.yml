@@ -42,3 +42,4 @@ jobs:
     - name: Terraform Apply
       if: github.event_name == 'pull_request'
       run: terraform apply 
+
