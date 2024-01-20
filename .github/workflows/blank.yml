@@ -1,9 +1,12 @@
 name: Terraform Workflow
 
 on:
-  push:
+  pull_request:
     branches:
       - main
+  push:
+    branches:
+      - test1
       
 
 jobs:
@@ -40,4 +43,5 @@ jobs:
       run: terraform graph
 
     - name: Terraform Apply
+      if: github.ref == 'refs/heads/main' && github.event_name == 'pull_request'
       run: terraform apply -auto-approve
